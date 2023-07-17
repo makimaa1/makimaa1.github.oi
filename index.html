@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buat Si Cantik</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .perkenalan {
+        position: absolute;
+        font-size: 50px;
+        left: 555px;
+        top: 30px;
+      }
+
+      .pertanyaan {
+        position: absolute;
+        top: 90px;
+        font-size: 45px;
+        left: 350px;
+      }
+
+      .love {
+        position: absolute;
+        font-size: 60px;
+        top: 140px;
+        left: 638px;
+        color: red;
+      }
+
+      .btnGroup {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top: 270px;
+        left: -20px;
+      }
+
+      .mau {
+        position: absolute;
+        width: 70px;
+        height: 30px;
+        left: 560px;
+      }
+
+      .nggak {
+        position: absolute;
+        width: 70px;
+        height: 30px;
+        right: 550px;
+      }
+
+      @media screen and (max-width: 634px) {
+        .perkenalan {
+          position: absolute;
+          font-size: 50px;
+          left: 85px;
+          top: 30px;
+        }
+
+        .pertanyaan {
+          position: absolute;
+          top: 90px;
+          font-size: 30px;
+          left: 2px;
+          text-align: center;
+        }
+
+        .love {
+          position: absolute;
+          font-size: 60px;
+          top: 160px;
+          left: 168px;
+          color: red;
+        }
+
+        .btnGroup {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          top: 270px;
+          left: 10px;
+        }
+
+        .mau {
+          position: absolute;
+          width: 70px;
+          height: 30px;
+          left: 80px;
+        }
+
+        .nggak {
+          position: absolute;
+          width: 70px;
+          height: 30px;
+          right: 90px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ganti teks disini -->
+    <h1 class="perkenalan">Hai Cantik</h1>
+    <h1 class="pertanyaan">Kamu sayang gak sama aku?</h1>
+    <h1 class="love">❤</h1>
+    <!-- ganti teks disini -->
+    <div class="btnGroup">
+      <button class="mau" onclick="mau()">sayang</button>
+      <button id="nggak" class="nggak" onclick="nggak()">Nggak</button>
+    </div>
+
+    <script>
+      const x = document.querySelector("button.nggak");
+      x.addEventListener("click", function () {
+        const i = Math.floor(Math.random() * 200) + 1;
+        const j = Math.floor(Math.random() * 200) + 1;
+
+        x.style.left = i + "px";
+        x.style.top = j + "px";
+      });
+
+      // ganti kata-kata disini
+      function mau() {
+        alert(`Wah.... makasih udah sayang ama aku😍`);
+        alert(`Aku tunggu balesan kamu lewat WA ya😁`);
+        alert(`Nanti malem kita langsung mabar😘`);
+        location.assign(
+          "https://wa.me/?083135425241 text=Aku%20sayang%20sama%20kamu%20yuk%20nanti%20malam%20kita%20mabar%20"
+        );
+      }
+    </script>
+  </body>
+</html>
